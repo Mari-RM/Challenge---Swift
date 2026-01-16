@@ -1,4 +1,4 @@
-# 🥩 Swift Challenge - Catálogo de Produtos
+# Swift Challenge - Catálogo de Produtos
 
 Sistema de catálogo de produtos desenvolvido para o desafio Swift, apresentando uma interface moderna e profissional para visualização e gerenciamento de produtos alimentícios com carrinho de compras.
 
