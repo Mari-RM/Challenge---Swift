@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift Atendimento Guiado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <div id="carouselExample" class="carousel slide" data-bs-interval="false" data-bs-wrap="false">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active" data-bs-interval="false" id="tela1">
+                <main class="container-main">
+                    <section class="character-area">
+                        <a href="index.html">
+                            <button class="btn btn-danger back-btn" id="voltar1" type="button">← Voltar</button>
+                        </a>
+                    </section>
+                    <section class="chat-container">
+                        <div class="balao">
+                            É um prazer te ajudar! Nos informe seu <u>nome</u> e <u>CEP</u> por gentileza?
+                        </div>
+                        <div class="cards-grid" data-tipo="cliente">
+                            <div class="input-group">
+                                <input type="text" id="nomeCliente" placeholder="Nome">
+                            </div>
+                            <div class="input-group">
+                                <input type="number" id="cepCliente" placeholder="CEP">
+                            </div>
+                            <button class="btn btn-danger next-btn" id="proximo1" type="button" disabled
+                                data-bs-target="#carouselExample" data-bs-slide="next">Continuar →</button>
+                            <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" class="cep-link">Não
+                                sabe seu CEP?
+                                Clique aqui.</a>
+                        </div>
+                    </section>
+                </main>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="false" id="tela2">
+                <main class="container-main">
+                    <section class="character-area">
+                        <button class="btn btn-danger back-btn" id="voltar2" type="button"
+                            data-bs-target="#carouselExample" data-bs-slide="prev">← Voltar</button>
+                    </section>
+                    <section class="chat-container">
+                        <div class="balao">
+                            Ótimo! Agora me conta: para qual ocasião você está comprando?
+                        </div>
+                        <div class="cards-grid" data-tipo="ocasiao" id="ocasiaoSelecao">
+                            <div class="card-custom card-interactive" data-valor="churrasco">Churrasco</div>
+                            <div class="card-custom card-interactive" data-valor="refeicao">Refeição Rápida</div>
+                            <div class="card-custom card-interactive" data-valor="jantar">Jantar Especial</div>
+                            <div class="card-custom card-interactive" data-valor="almoco">Almoço dia a dia</div>
+                            <div class="card-custom card-interactive" data-valor="master">Master cheff</div>
+                            <div class="card-custom card-interactive" data-valor="outro">Outro</div>
+                            <button class="btn btn-danger next-btn" id="proximo2" type="button" disabled
+                                data-bs-target="#carouselExample" data-bs-slide="next">Continuar →</button>
+                        </div>
+                    </section>
+                </main>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="false" id="tela3">
+                <main class="container-main">
+                    <section class="character-area">
+                        <button class="btn btn-danger back-btn" id="voltar3" type="button"
+                            data-bs-target="#carouselExample" data-bs-slide="prev">← Voltar</button>
+                    </section>
+                    <section class="chat-container">
+                        <div class="balao">
+                            Ótima escolha!! Por favor, selecione o tipo de carne:
+                        </div>
+                        <div class="cards-grid" data-tipo="carne" id="tipoCarneSelecao">
+                            <div class="card-custom card-interactive" data-valor="suina">
+                                <img src="./assets/img/carnes/suína.jpeg" alt="Imagem de carne suína" />
+                                <div class="card-label">Suína</div>
+                            </div>
+                            <div class="card-custom card-interactive" data-valor="bovina">
+                                <img src="./assets/img/carnes/bovina.jpg" alt="Imagem de carne bovina" />
+                                <div class="card-label">Bovina</div>
+                            </div>
+                            <div class="card-custom card-interactive" data-valor="peixe">
+                                <img src="./assets/img/carnes/peixe.jpeg" alt="Imagem de peixe" />
+                                <div class="card-label">Peixe</div>
+                            </div>
+                            <div class="card-custom card-interactive" data-valor="frango">
+                                <img src="./assets/img/carnes/frango.jpeg" alt="Imagem de frango" />
+                                <div class="card-label">Frango</div>
+                            </div>
+                            <div class="card-custom card-interactive justify-content-center" data-valor="outro">
+                                <div class="card-label m-0">Outro...</div>
+                            </div>
+                            <button class="btn btn-danger next-btn" id="proximo3" type="button" disabled
+                                data-bs-target="#carouselExample" data-bs-slide="next">Continuar →</button>
+                        </div>
+                    </section>
+                </main>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="false" id="tela4">
+                <main class="container-main">
+                    <section class="character-area">
+                        <button class="btn btn-danger back-btn" id="voltar4" type="button"
+                            data-bs-target="#carouselExample" data-bs-slide="prev">← Voltar</button>
+                    </section>
+                    <section class="chat-container">
+                        <div class="balao">
+                            Ótima escolha!! E você já tem alguma preferência de corte?
+                        </div>
+                        <div class="cards-grid" data-tipo="corte" id="cutSelection">
+                            <div class="card-custom card-interactive" data-valor="file_peito">
+                                <img src="./assets/img/cortes de carne (frango)/filé de peito.jpg"
+                                    alt="Filé de peito de frango" />
+                                <div class="card-label">filé de peito</div>
+                            </div>
+                            <div class="card-custom card-interactive" data-valor="coxa_sobrecoxa">
+                                <img src="./assets/img/cortes de carne (frango)/coxa e sobrecoxa.jpg"
+                                    alt="Coxa e sobrecoxa" />
+                                <div class="card-label">coxa & sobrecoxa</div>
+                            </div>
+                            <div class="card-custom card-interactive" data-valor="frango_cubos">
+                                <img src="./assets/img/cortes de carne (frango)/frangos em cubo.jpg"
+                                    alt="Frango em cubos" />
+                                <div class="card-label">frango em cubos</div>
+                            </div>
+                            <div class="card-custom card-interactive" data-valor="tulipa">
+                                <img src="./assets/img/cortes de carne (frango)/tulipa de frango.jpg"
+                                    alt="Tulipa de frango" />
+                                <div class="card-label">tulipa</div>
+                            </div>
+                            <div class="card-custom card-interactive justify-content-center" data-valor="outro">
+                                <div class="card-label m-0">Outro...</div>
+                            </div>
+                            <button class="btn btn-danger next-btn" id="proximo4" type="button" disabled
+                                data-bs-target="#carouselExample" data-bs-slide="next">Continuar →</button>
+                        </div>
+                    </section>
+                </main>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="false" id="tela5">
+                <main class="container-main">
+                    <section class="character-area">
+                        <button class="btn btn-danger back-btn" id="voltar5" type="button"
+                            data-bs-target="#carouselExample" data-bs-slide="prev">← Voltar</button>
+                    </section>
+                    <section class="chat-container">
+                        <div class="balao">
+                            Você está indo muito bem!! E para fechar com chave de ouro: vai algum complemento?
+                        </div>
+                        <div class="cards-grid" data-tipo="complemento" id="complementoSelecao">
+                            <div class="card-custom card-interactive" data-valor="farofa">
+                                <img src="./assets/img/complementos/farofa.jpg" alt="Farofa"
+                                    style="width:100%; height:auto;" />
+                                <div class="card-label">Farofa</div>
+                                <div class="card-badge">fica top</div>
+                            </div>
+                            <div class="card-custom card-interactive" data-valor="sais_temperos">
+                                <img src="./assets/img/complementos/sais e temperos.jpg" alt="Sais e Temperos"
+                                    style="width:100%; height:auto;" />
+                                <div class="card-label">Sais & Temperos</div>
+                            </div>
+                            <div class="card-custom card-interactive" data-valor="frutas_vegetais">
+                                <img src="./assets/img/complementos/frutas e vegetais.jpg" alt="Frutas e Vegetais"
+                                    style="width:100%; height:auto;" />
+                                <div class="card-label">Frutas e Vegetais</div>
+                            </div>
+                            <div class="card-custom card-interactive" data-valor="caldo">
+                                <img src="./assets/img/complementos/caldo.jpg" alt="Caldo"
+                                    style="width:100%; height:auto;" />
+                                <div class="card-label">Caldo</div>
+                            </div>
+                            <div class="card-custom card-interactive justify-content-center" data-valor="outro">
+                                <div class="card-label m-0">Outro...</div>
+                            </div>
+                            <button class="btn btn-danger next-btn" id="proximo5" type="button" disabled
+                                data-bs-target="#carouselExample" data-bs-slide="next">Continuar →</button>
+                        </div>
+                    </section>
+                </main>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="false" id="tela6">
+                <main class="container-main">
+                    <section class="character-area">
+                        <button class="btn btn-danger back-btn" id="voltar6" type="button"
+                            data-bs-target="#carouselExample" data-bs-slide="prev">← Voltar</button>
+                    </section>
+                    <section class="chat-container">
+                        <div class="balao">
+                            Uhuu! Tudo pronto! Clique abaixo para finalizar sua compra.
+                        </div>
+                        <a href="https://www.swift.com.br/checkout/cart">
+                            <button id="carrinho" class="btn btn-danger">Ir para o carrinho 🛒</button>
+                        </a>
+                    </section>
+                </main>
+            </div>
+
+            <div class="carousel-item">
+                <div class="container p-4 text-center">
+                    <h2 class="mb-3">É um prazer te ajudar!</h2>
+                    <p>Nos informe seu <strong>Nome</strong> e <strong>CPF</strong> por gentileza:</p>
+                    <input type="text" placeholder="Nome" class="form-control mb-2">
+                    <input type="text" placeholder="CPF" class="form-control mb-3">
+
+                    <button class="btn btn-primary" data-bs-target="#carouselExample" data-bs-slide="next">
+                        Continuar →
+                    </button>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="container p-4 text-center">
+                    <h2 class="mb-3">Ótimo! Agora me conta:</h2>
+                    <p>Para qual ocasião você está comprando?</p>
+
+                    <div class="d-flex justify-content-center gap-2 mb-3">
+                        <button class="btn btn-outline-secondary">Churrasco</button>
+                        <button class="btn btn-outline-secondary">Refeição Rápida</button>
+                        <button class="btn btn-outline-secondary">Jantar Especial</button>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-secondary" data-bs-target="#carouselExample" data-bs-slide="prev">
+                            ← Voltar
+                        </button>
+                        <button class="btn btn-primary" data-bs-target="#carouselExample" data-bs-slide="next">
+                            Continuar →
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="container p-4 text-center">
+                    <h2 class="mb-3">Qual vai ser a carne de hoje?</h2>
+                    <div class="d-flex justify-content-center gap-2 mb-3">
+                        <button class="btn btn-outline-secondary">Fraldinha</button>
+                        <button class="btn btn-outline-secondary">Picanha</button>
+                        <button class="btn btn-outline-secondary">Costela</button>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-secondary" data-bs-target="#carouselExample" data-bs-slide="prev">
+                            ← Voltar
+                        </button>
+                        <button class="btn btn-success" data-bs-target="#carouselExample" data-bs-slide="next">
+                            Finalizar →
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

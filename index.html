@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Swift - Delivery de carnes premium com qualidade e sabor para suas refeições">
+    <meta name="keywords" content="carnes, delivery, churrasco, swift, açougue online">
+    <title>Swift - Delivery de Carnes Premium</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            
+            <aside class="col-md-2 sidebar position-relative" role="complementary" aria-label="Menu lateral">
+                <header class="logo">
+                    <img src="./assets/img/logoSwift.png" alt="Logo Swift - Delivery de Carnes Premium">
+                </header>
+
+                <nav aria-label="Menu principal">
+                    <a href="#home" class="nav-item active" aria-current="page">
+                        <i class="bi bi-house-door" aria-hidden="true"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="#cortes" class="nav-item">
+                        <i class="bi bi-scissors" aria-hidden="true"></i>
+                        <span>Cortes</span>
+                    </a>
+                    <a href="#temperos" class="nav-item">
+                        <i class="bi bi-grid-3x3" aria-hidden="true"></i>
+                        <span>Temperos</span>
+                    </a>
+                    <a href="#snacks" class="nav-item">
+                        <i class="bi bi-cup-straw" aria-hidden="true"></i>
+                        <span>Snacks</span>
+                    </a>
+                    <a href="#sacola" class="nav-item">
+                        <i class="bi bi-bag" aria-hidden="true"></i>
+                        <span>Sacola</span>
+                    </a>
+                </nav>
+
+                <div class="user-profile" role="contentinfo" aria-label="Informações do usuário">
+                    <i class="bi bi-person-circle" aria-hidden="true"></i>
+                    <div>
+                        <strong>Perfil de usuário</strong>
+                        <small>Usuário não premium</small>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="col-md-7 main-content" role="main">
+                <header class="page-header">
+                    <h2 class="welcome-header">Olá, Seja Bem-vindo</h2>
+                </header>
+
+                <div class="delivery-info" role="status" aria-live="polite">
+                    <i class="bi bi-truck" aria-hidden="true"></i>
+                    <p>Frete grátis a partir de R$ 339,00 nas modalidades de entrega agendada e entrega em 1 dia útil.</p>
+                </div>
+
+                <div class="search-container" role="search">
+                    <label for="mainSearch" class="visually-hidden">Buscar produtos</label>
+                    <input
+                        type="search"
+                        id="mainSearch"
+                        class="search-input"
+                        placeholder="Buscar..."
+                        aria-label="Campo de busca de produtos"
+                    >
+                </div>
+
+                <section class="intro-section">
+                    <h2 class="section-title">Churrasco de qualidade começa na origem!</h2>
+                    <p>
+                        Carnes ultracongeladas e selecionadas para você levar pra casa 
+                        somente o melhor da Swift em peças, cubos, filés e muito mais. 
+                        Tudo para as suas refeições diárias se tornarem uma experiência 
+                        de sabor sem igual.
+                    </p>
+                </section>
+
+                <section class="churrasco-banner" aria-labelledby="churrasco-title">
+                    <div class="row align-items-center">
+                        <div class="col-md-4">
+                            <h3 id="churrasco-title">Churrasco é na Swift</h3>
+                            <p>Felicidade tem cheiro de brasa e sabor de quero mais</p>
+                            <div class="search-container" role="search">
+                                <label for="churrascoSearch" class="visually-hidden">Buscar churrasco</label>
+                                <a href="guia.html">
+                                <input
+                                    type="button"
+                                    id="churrascoSearch"
+                                    class="search-input"
+                                    value="Veja nosso guia"
+                                    style="background: rgb(255, 255, 255); color: var(--swift-orange); font-weight: bolder;"
+                                    aria-label="Buscar produtos para churrasco"
+                                >
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-8">
+                            <div class="promo-cards" role="list" aria-label="Promoções em destaque">
+                                <article class="promo-card" role="listitem">
+                                    <h4 class="promo-label">Swift Em DOBRO</h4>
+                                    <p class="promo-price">R$ 29,90</p>
+                                    <small>A partir de</small>
+                                </article>
+                                
+                                <article class="promo-card" role="listitem">
+                                    <h4 class="promo-label">Linguiça Toscana Swift 700g</h4>
+                                    <p class="promo-price">R$ 14,90</p>
+                                    <p class="text-decoration-line-through text-muted">R$ 28,00</p>
+                                </article>
+                                
+                                <article class="promo-card" role="listitem">
+                                    <h4 class="promo-label">Costela de Boi Swift 500g - 1kg</h4>
+                                    <p class="promo-price">R$ 16,90</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="products-section" aria-labelledby="products-title">
+                    <header>
+                        <h3 id="products-title" class="section-title">
+                            Qualidade e sabor para as suas refeições, todos os dias!
+                        </h3>
+                        <p><strong>Melhores descontos da semana:</strong></p>
+                    </header>
+
+                    <div class="product-grid" id="productGrid" role="list" aria-label="Lista de produtos em promoção">
+                    </div>
+                </section>
+            </main>
+
+            <aside class="col-md-3" role="complementary" aria-label="Carrinho e atalhos">
+                <div class="right-panel">
+                    <header class="cart-header">
+                        <h3 class="cart-title">Pedidos</h3>
+                        <button type="button" class="cart-btn" aria-label="Ver carrinho de compras">
+                            Carrinho
+                        </button>
+                    </header>
+
+                    <section 
+                        id="cartItems" 
+                        class="cart-items" 
+                        role="list" 
+                        aria-label="Itens no carrinho"
+                        aria-live="polite"
+                    >
+                    </section>
+
+                    <section class="atalhos-section" aria-labelledby="atalhos-title">
+                        <h4 id="atalhos-title" class="section-title">Atalhos</h4>
+                        <nav class="atalhos-buttons" aria-label="Atalhos rápidos">
+                            <button type="button" class="atalho-btn">
+                                Para sua empresa
+                            </button>
+                            <button type="button" class="atalho-btn">
+                                Encontre uma localidade
+                            </button>
+                            <button type="button" class="atalho-btn">
+                                Suporte
+                            </button>
+                        </nav>
+                    </section>
+                </div>
+            </aside>
+            
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

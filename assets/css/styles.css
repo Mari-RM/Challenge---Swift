@@ -1,0 +1,348 @@
+
+/* GUIA */
+
+:root {
+  --laranja: #DC4405;
+  --laranja-escuro: #d94b00;
+  --laranja-claro: #ff5e19;
+  --laranja-destaque: #f36c21;
+  --marrom-escuro: #442215;
+  --dourado: #ffc13b;
+  --bege-borda: #e4dbcf;
+
+  --fonte-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --fonte-secundaria: 'Verdana', sans-serif;
+  --fonte-simples: Arial, sans-serif;
+}
+
+body {
+  background-color: #1a1814;
+  font-family: var(--fonte-base);
+  color: white;
+}
+
+.btn {
+  background-color: var(--laranja);
+}
+
+.next-btn {
+  align-self: flex-end;
+  margin-left: auto;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.5);
+}
+
+.back-btn {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 10;
+  user-select: none;
+}
+
+.container-main {
+  max-width: 1024px;
+  margin: 2rem auto;
+  background: linear-gradient(rgba(250, 207, 143, 0.8)),
+    url("/assets/img/lojaSwift.jpg") no-repeat center center fixed;
+  background-size: cover;
+  border: 8px solid var(--bege-borda);
+  border-radius: 10px;
+  display: flex;
+  height: 505px;
+  box-shadow: 0 4px 15px rgba(197, 197, 197, 0.9);
+  overflow: hidden;
+  position: relative;
+}
+
+.character-area {
+  position: relative;
+  flex: 0 0 40%;
+  background: url("/assets/img/atendente.png") center center/contain no-repeat;
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+  border-radius: 0.5rem;
+}
+
+.chat-container {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  margin-right: 1rem;
+}
+
+.balao {
+  background-color: var(--laranja-escuro);
+  border-radius: 1rem 1rem 1rem 0.3rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: var(--fonte-secundaria);
+  max-width: 480px;
+  position: relative;
+  user-select: none;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.5);
+}
+
+.balao::before {
+  content: "Swift";
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  background: #ff5315;
+  color: white;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 2px 8px;
+  border-radius: 1rem 1rem 1rem 0.3rem;
+  font-family: var(--fonte-base);
+  user-select: none;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.9rem;
+  max-width: 500px;
+}
+
+.card-custom {
+  background: var(--laranja-escuro);
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.card-custom:hover,
+.card-custom:focus {
+  background-color: var(--laranja-claro);
+  box-shadow: 0 4px 15px rgb(255 94 25 / 0.6);
+  transform: translateY(-4px);
+  outline: none;
+  z-index: 5;
+}
+
+.card-custom img {
+  width: 100%;
+  border-radius: 10px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-bottom: 2px solid #e26100;
+  display: block;
+  user-select: none;
+}
+
+.card-label {
+  padding: 0.5rem 0.7rem;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1rem;
+  text-shadow: 0 0 1px rgb(0 0 0 / 0.8);
+  line-height: 1.2;
+}
+
+.card-value-icon {
+  position: absolute;
+  bottom: -6px;
+  right: -5px;
+  background: var(--dourado);
+  color: #623e00;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0 8px;
+  border-radius: 4px;
+  line-height: 1.2;
+  user-select: none;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.3);
+  pointer-events: none;
+  font-family: Arial, sans-serif;
+}
+
+.selected {
+  box-shadow: 0 0 12px 3px #ffd5aa !important;
+  transform: translateY(-3px) !important;
+  z-index: 10 !important;
+}
+
+#tela2 .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-width: 500px;
+}
+
+#tela2 .card-custom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 2px solid var(--laranja-destaque);
+  color: var(--laranja-destaque);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#tela2 .card-custom:hover,
+#tela2 .card-custom:focus,
+#tela2 .card-custom.selected {
+  background-color: var(--laranja-destaque);
+  color: #fff;
+  outline: none;
+}
+
+#tela2 .next-btn {
+  grid-column: 1 / -1;
+  justify-self: end;
+  margin-top: 10px;
+}
+
+#tela1 .cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 480px;
+  margin-top: 1rem;
+}
+
+.input-group {
+  width: 100%;
+  position: relative;
+  border-radius: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.input-group .input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #999;
+}
+
+.cep-link {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #612700;
+  text-decoration: underline;
+  cursor: pointer;
+  align-self: center;
+  font-weight: 600;
+
+}
+
+.card-badge {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background-color: #442215;
+  color: white;
+  border: 1px solid #ffd35a;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 5px;
+  user-select: none;
+  pointer-events: none;
+  box-shadow: 0 0 5px rgba(255, 83, 21, 0.7);
+}
+
+#carrinho {
+  margin-block: 50px;
+  border: none;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  min-width: 200px;
+}
+
+#carrinho:hover,
+#carrinho:focus {
+  background-color: #bd3c00;
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgba(255, 77, 53, 0.5);
+}
+
+#tela6 .chat-container {
+  margin-top: -80px;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  #tela1 .cards-grid, #tela2 .cards-grid {
+    align-self: center;
+    width: 100%;
+  }
+
+  .container-main {
+    flex-direction: column;
+    height: auto;
+    border-width: 6px;
+    margin: 1rem 0.8rem;
+  }
+
+  .character-area {
+    flex-basis: auto;
+    margin: 0 auto;
+    width: 90%;
+    height: 280px;
+    background-size: contain;
+  }
+
+  .chat-container {
+    margin-inline: 10px;
+    margin-bottom: 20px;
+  }
+
+  .balao {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .cards-grid {
+    max-width: 100%;
+    gap: 0.7rem;
+  }
+
+  .back-btn {
+    left: 0;
+  }
+
+  #tela6 .chat-container {
+    margin-top: 0;
+  }
+
+}
+
+/*------------------/*
